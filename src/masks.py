@@ -12,7 +12,7 @@ def get_mask_account(number_card_2: int) -> str:
     """Функция возвращает маску номера карты в формате
     **XXXX"""
     number_card = str(number_card_2)
-    if len(number_card) == 16:
+    if len(number_card) >= 16:
         mask_account = f"**{number_card[-4:]}"
         return mask_account
     return "Введен не верный номер карты"
