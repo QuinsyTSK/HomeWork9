@@ -1,5 +1,6 @@
 from masks import get_mask_card_number, get_mask_account
 
+
 def mask_account_card(account_info: str) -> str:
     """Принимаем тип и номер карты, возвращает тип и маску номера"""
     type_list = []
@@ -30,6 +31,6 @@ def get_date(date_card: str) -> str:
 
 
 if __name__ == "__main__":
-    print(mask_account_card('Maestro 1596837868705199'))
-    print(mask_account_card('Счет 64686473678894779589'))
-    print(get_date('2024-03-11T02:26:18.671407'))
+    print(mask_account_card("Maestro 1596837868705199"))
+    print(mask_account_card("Счет 64686473678894779589"))
+    print(get_date("2024-03-11T02:26:18.671407"))
