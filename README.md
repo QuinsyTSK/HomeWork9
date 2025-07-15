@@ -9,11 +9,21 @@
 ## Установка
 
 1. Клонируйте репозиторий:
-``` https://github.com/QuinsyTSK/HomeWork9/tree/main ```
+```
+https://github.com/QuinsyTSK/HomeWork9/tree/main
+```
 
-## Зависимости
+2. Установите зависимости:
+```
+poetry instal
+```
 
-Данный проект не требует дополнительных установок
+3. Проверьте качество кода:
+```
+poetry run flake8
+poetry run black --check
+poetry run mypy src/
+```
 
 ## Использование
 
