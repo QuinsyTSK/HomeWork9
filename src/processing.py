@@ -1,5 +1,6 @@
 def filter_by_state(list_of_data_cards_1: list[dict], state: str = "EXECUTED") -> list[dict]:
-    """Функция возвращает список по заданному ключу 'state'"""
+    """Функция принимает список словарей с данными счета.карты и заданный ключ 'state' (по умолчанию EXECUTED)
+    и возвращает список по заданному этому ключу"""
     filtered_list = []
     for data_item in list_of_data_cards_1:
         if data_item.get("state") == state:
@@ -9,7 +10,8 @@ def filter_by_state(list_of_data_cards_1: list[dict], state: str = "EXECUTED") -
 
 
 def sort_by_date(list_of_data_cards_2: list[dict], reverse: bool = True) -> list[dict]:
-    """Функция возвращает отсортированный список по дате"""
+    """Функция принимает список словарей с данными счета/карты и параметр сортировки (по умолчанию True)
+    и возвращает отсортированный список по дате согласно параметру"""
     return sorted(list_of_data_cards_2, key=lambda x: x["date"], reverse=reverse)
 
 
