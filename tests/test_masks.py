@@ -1,6 +1,6 @@
 import pytest
 
-from src.masks import get_mask_card_number, get_mask_account
+from src.masks import get_mask_account, get_mask_card_number
 
 
 @pytest.mark.parametrize(
@@ -31,7 +31,7 @@ def number_account():
     return "12121212121212121212"
 
 
-def test_get_mask_account(number_account):
+def test_get_mask_account_good(number_account):
     assert get_mask_account(number_account) == "**1212"
 
 
