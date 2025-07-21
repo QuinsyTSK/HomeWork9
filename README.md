@@ -41,10 +41,12 @@ pytest
 Тесты покрывают следующие модули и функции:
 
 ```
-- masks: функции get_mask_card_number и get_mask_account.
+- masks: функции get_mask_card_number и get_mask_account;
+- wedgit: функции mask_account_card и get_date;
+- processing: функции filter_by_state и sort_by_date.
 ```
 
-Покрытие тестами составляет более 93% кода проекта.
+Покрытие тестами составляет более 92% кода проекта.
 
 ## Документация
 
