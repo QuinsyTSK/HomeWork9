@@ -1,7 +1,7 @@
 def get_mask_card_number(number_card_1: str) -> str:
     """Функция возвращает маску номера карты в формате
     XXXX XX** **** XXXX"""
-    number_card = ''
+    number_card = ""
     for i in number_card_1:
         if i.isalpha():
             raise TypeError("Введен не верный номер карты")
@@ -17,7 +17,7 @@ def get_mask_card_number(number_card_1: str) -> str:
 def get_mask_account(number_account_2: str) -> str:
     """Функция возвращает маску номера карты в формате
     **XXXX"""
-    number_account = ''
+    number_account = ""
     for i in number_account_2:
         if i.isalpha():
             raise TypeError("Введен не верный номер счета")

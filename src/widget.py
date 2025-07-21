@@ -3,9 +3,8 @@ from src.masks import get_mask_card_number, get_mask_account
 
 def mask_account_card(account_info: str) -> str:
     """Принимаем тип и номер карты, возвращает тип и маску номера"""
-    if account_info == "": # проверяем строку данных на наличие символов
+    if account_info == "":  # проверяем строку данных на наличие символов
         raise ValueError("Неверный данные")
-
 
     type_list = []
     number_list = account_info.split()
@@ -18,7 +17,7 @@ def mask_account_card(account_info: str) -> str:
 
     # Определяем номер карты
     card_number = number_list[-1]
-    for i in card_number: # Проверяем номер на наличие не числовых символов
+    for i in card_number:  # Проверяем номер на наличие не числовых символов
         if i.isalpha():
             raise ValueError("Неверный данные номера")
 
@@ -32,7 +31,7 @@ def mask_account_card(account_info: str) -> str:
 def get_date(date_card: str) -> str:
     """Функция выводит дату в формате ДД.ММ.ГГГГ"""
 
-    if date_card == "": # проверяем строку с данными даты на наличие символов
+    if date_card == "":  # проверяем строку с данными даты на наличие символов
         raise ValueError("Неверный ввод даты")
 
     date_list = date_card.split("-", 2)

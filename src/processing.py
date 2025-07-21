@@ -6,7 +6,6 @@ def filter_by_state(list_of_data_cards_1: list[dict], state: str = "EXECUTED") -
         if not state_item.get("state"):
             raise KeyError("В данных отсутствует статус")
 
-
     for data_item in list_of_data_cards_1:
         if data_item.get("state") == state:
             filtered_list.append(data_item)
