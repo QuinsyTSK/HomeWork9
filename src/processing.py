@@ -1,10 +1,14 @@
 def filter_by_state(list_of_data_cards_1: list[dict], state: str = "EXECUTED") -> list[dict]:
-    """Функция принимает список словарей с данными счета.карты и заданный ключ 'state' (по умолчанию EXECUTED)
+    """Функция принимает список словарей с данными счета карты и заданный ключ 'state' (по умолчанию EXECUTED)
     и возвращает список по заданному этому ключу"""
     filtered_list = []
-    for data_item in list_of_data_cards_1:
-        if data_item.get("state") == state:
-            filtered_list.append(data_item)
+    for state_item in list_of_data_cards_1: # проверка на наличие state в словаре
+        if not state_item["state"]:
+            raise KeyError("В данных отсутствует статус")
+
+    for state_item in list_of_data_cards_1:
+        if state_item["state"] == state:
+            filtered_list.append(state_item)
 
     return filtered_list
 
@@ -12,6 +16,14 @@ def filter_by_state(list_of_data_cards_1: list[dict], state: str = "EXECUTED") -
 def sort_by_date(list_of_data_cards_2: list[dict], reverse: bool = True) -> list[dict]:
     """Функция принимает список словарей с данными счета/карты и параметр сортировки (по умолчанию True)
     и возвращает отсортированный список по дате согласно параметру"""
+
+    if not list_of_data_cards_2: # проверка на пустой список
+        raise ValueError("Отсутствуют данные")
+
+    for data_item in list_of_data_cards_2: # проверка на наличие date в словаре
+        if not data_item["date"]:
+            raise KeyError("В данных отсутствует дата")
+
     return sorted(list_of_data_cards_2, key=lambda x: x["date"], reverse=reverse)
 
 
